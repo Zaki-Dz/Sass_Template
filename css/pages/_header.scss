@@ -1,0 +1,76 @@
+header {
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	background-color: white;
+	box-shadow: 0 0 10px $redColor;
+	padding: 0.5rem 0;
+
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		.logo {
+			p {
+				font-size: 0.8rem;
+				color: $redColor;
+				font-weight: bold;
+			}
+
+			@include maxMd {
+				h1 {
+					color: red;
+					font-size: 1rem;
+				}
+
+				p {
+					display: none;
+				}
+			}
+		}
+
+		nav {
+			ul {
+				display: flex;
+				align-items: center;
+				background-color: $redColor;
+				border-radius: 1rem;
+				border: 1px solid $redColor;
+				overflow: hidden;
+
+				li {
+					padding: 0.5rem 1rem;
+					color: white;
+					cursor: pointer;
+					transition: $mainTransition;
+					font-size: 0.8rem;
+
+					&:hover {
+						background-color: white;
+						color: $redColor;
+						font-weight: bold;
+					}
+
+					&.active {
+						@extend :hover;
+						cursor: not-allowed;
+					}
+				}
+			}
+		}
+
+		@include maxSm {
+			.logo {
+				display: none;
+			}
+
+			nav {
+				width: 100%;
+				ul {
+					flex-wrap: wrap;
+				}
+			}
+		}
+	}
+}

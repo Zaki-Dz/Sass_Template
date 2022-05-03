@@ -11,10 +11,11 @@ html {
 }
 
 body {
-	font-family: 'Roboto';
+	font-family: roboto, tahoma, arial, sans-serif;
 }
 
-ul {
+ul,
+ol {
 	list-style: none;
 }
 
@@ -30,6 +31,6 @@ button {
 	background-color: transparent;
 }
 
-img{
-	margin-bottom: -5px;
+img {
+	width: 100%;
 }

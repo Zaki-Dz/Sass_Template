@@ -1,0 +1,117 @@
+footer {
+	background-color: #ddd;
+	padding: 1rem 0;
+
+	.top {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+		gap: 2rem 1rem;
+
+		& > div {
+			display: flex;
+			flex-direction: column;
+			gap: 0.5rem;
+		}
+
+		@include maxSm {
+			& {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+		}
+
+		.latest {
+			grid-column: 1 / 3;
+
+			.element {
+				margin-top: 1rem;
+				display: flex;
+				gap: 0.5rem;
+
+				img {
+					max-width: 150px;
+					border: 5px solid white;
+				}
+
+				.content {
+					display: flex;
+					flex-direction: column;
+					gap: 0.5rem;
+
+					.element-title {
+						color: $redColor;
+						font-weight: bold;
+					}
+
+					p {
+						color: #555;
+					}
+				}
+			}
+		}
+
+		.company {
+			@include maxSm {
+				& {
+					width: 100%;
+				}
+			}
+
+			ul {
+				margin-top: 1rem;
+				color: #555;
+
+				.list-title {
+					font-weight: bold;
+				}
+
+				li span {
+					color: $redColor;
+				}
+			}
+		}
+
+		.contact {
+			@include maxSm {
+				& {
+					width: 100%;
+				}
+			}
+
+			form {
+				margin-top: 1rem;
+				display: flex;
+				flex-direction: column;
+				gap: 0.5rem;
+
+				input,
+				textarea,
+				button {
+					background-color: #eee;
+					border: none;
+					border-radius: 0.3rem;
+					padding: 0.5rem 1rem;
+				}
+
+				textarea {
+					min-height: 100px;
+				}
+
+				button {
+					background-color: $redColor;
+					width: fit-content;
+					color: white;
+				}
+			}
+		}
+	}
+
+	.bottom {
+		margin-top: 2rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		color: #555;
+	}
+}

@@ -1,0 +1,32 @@
+// import variables
+@use 'inc/variables' as *;
+
+// import default rules
+@import 'inc/mixins';
+
+// import container
+@import 'inc/container';
+
+// import default rules
+@import 'inc/default';
+
+// import headings
+@import 'components/headings';
+
+// import header
+@import 'pages/header';
+
+// import homepage
+@import 'pages/homepage';
+
+// import services
+@import 'pages/services';
+
+// import players
+@import 'pages/players';
+
+// import gallery
+@import 'pages/gallery';
+
+// import footer
+@import 'pages/footer';
